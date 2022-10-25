@@ -35,9 +35,9 @@ public class Draggable3DManager : MonoBehaviour
     private void OnDisable()
     {
         // Subscribe to the OnStartTouchEvent
-        inputManager.OnStartTouch += StartTouch;
-        inputManager.OnEndTouch += EndTouch;
-        inputManager.OnTouchMoved += TouchMoved;
+        inputManager.OnStartTouch -= StartTouch;
+        inputManager.OnEndTouch -= EndTouch;
+        inputManager.OnTouchMoved -= TouchMoved;
     }
 
     public void DiableInput(bool b)

@@ -37,6 +37,11 @@ public class SomeChildObjectClass : SomeParentObjectClass, IDraggable3D
         set => transform.localScale = value;
     }
 
+    void IDraggable3D.OnTap()
+    {
+
+    }
+
     // needed for IDraggable3D interface to work
     Finger _fingerID = null;
     [SerializeField] bool canMove = true;
